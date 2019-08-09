@@ -1,0 +1,22 @@
+# If you want Electrum-bcx to appear in a Linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum-bcx.desktop
+
+[Desktop Entry]
+Comment=Lightweight bcx Client
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\"; electrum-bcx %u"
+GenericName[en_US]=bcx Wallet
+GenericName=bcx Wallet
+Icon=electrum-bcx
+Name[en_US]=Electrum bcx Wallet
+Name=Electrum bcx Wallet
+Categories=Finance;Network;
+StartupNotify=true
+StartupWMClass=electrum-bcx
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/bcx;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\"; electrum-bcx --testnet %u"
+Name=Testnet mode
